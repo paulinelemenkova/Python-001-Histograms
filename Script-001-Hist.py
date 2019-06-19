@@ -26,7 +26,8 @@ sb.distplot(dfM['plate_maria'], kde=True, rug=True, hist=True,
             )
 plt.annotate('A', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9)
+                       edgecolor='grey', linewidth=1, alpha=0.9
+                       )
              )
 
 # subplot 2
@@ -37,7 +38,8 @@ sb.distplot(dfM['plate_pacif'], kde=True, rug=True, hist=True,
             label='Pacific Plate', vertical=False)
 plt.annotate('B', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9)
+                       edgecolor='grey', linewidth=1, alpha=0.9
+                       )
              )
 
 # subplot 3
@@ -48,7 +50,8 @@ sb.distplot(dfM['plate_carol'], kde=True, rug=True, hist=True,
             label='Caroline Plate', vertical=False)
 plt.annotate('C', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9)
+                       edgecolor='grey', linewidth=1, alpha=0.9
+                       )
              )
 
 # subplot 4
@@ -60,7 +63,8 @@ sb.distplot(
             label='Philippine Plate', vertical=False)
 plt.annotate('D', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9)
+                       edgecolor='grey', linewidth=1, alpha=0.9
+                       )
              )
 
 # visualize
