@@ -35,7 +35,8 @@ ax = fig.add_subplot(222)
 sb.distplot(dfM['plate_pacif'], kde=True, rug=True, hist=True,
             norm_hist=True, color="xkcd:aqua",
             axlabel='Pacific Plate observations',
-            label='Pacific Plate', vertical=False)
+            label='Pacific Plate', vertical=False
+            )
 plt.annotate('B', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
                        edgecolor='grey', linewidth=1, alpha=0.9
@@ -47,7 +48,8 @@ ax = fig.add_subplot(223)
 sb.distplot(dfM['plate_carol'], kde=True, rug=True, hist=True,
             norm_hist=True, color="xkcd:pale violet",
             axlabel='Caroline Plate observations',
-            label='Caroline Plate', vertical=False)
+            label='Caroline Plate', vertical=False
+            )
 plt.annotate('C', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
                        edgecolor='grey', linewidth=1, alpha=0.9
@@ -56,11 +58,11 @@ plt.annotate('C', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
 
 # subplot 4
 ax = fig.add_subplot(224)
-sb.distplot(
-            dfM['plate_phill'],kde=True, rug=True, hist=True,
+sb.distplot(dfM['plate_phill'],kde=True, rug=True, hist=True,
             norm_hist=True, color="xkcd:rose pink",
             axlabel='Philippine Plate observations',
-            label='Philippine Plate', vertical=False)
+            label='Philippine Plate', vertical=False
+            )
 plt.annotate('D', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
              bbox=dict(boxstyle='round, pad=0.3', fc='w',
                        edgecolor='grey', linewidth=1, alpha=0.9
@@ -75,4 +77,3 @@ plt.subplots_adjust(top=0.92, bottom=0.08,
                     )
 fig.savefig('plot_Hist.png', dpi=300)
 plt.show()
-
