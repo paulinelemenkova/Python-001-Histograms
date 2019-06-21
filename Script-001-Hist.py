@@ -32,7 +32,7 @@ sb.distplot(dfM['plate_maria'], kde=True, rug=True, hist=True,
             axlabel='Mariana Plate observations',
             label='Mariana Plate', vertical=False
             )
-add_at(ax, "A", loc=2)
+add_at(ax, "A")
 
 # subplot 2
 ax = fig.add_subplot(222)
@@ -41,7 +41,7 @@ sb.distplot(dfM['plate_pacif'], kde=True, rug=True, hist=True,
             axlabel='Pacific Plate observations',
             label='Pacific Plate', vertical=False
             )
-add_at(ax, "B", loc=2)
+add_at(ax, "B")
 
 # subplot 3
 ax = fig.add_subplot(223)
@@ -50,7 +50,7 @@ sb.distplot(dfM['plate_carol'], kde=True, rug=True, hist=True,
             axlabel='Caroline Plate observations',
             label='Caroline Plate', vertical=False
             )
-add_at(ax, "C", loc=2)
+add_at(ax, "C")
 
 # subplot 4
 ax = fig.add_subplot(224)
@@ -59,7 +59,7 @@ sb.distplot(dfM['plate_phill'],kde=True, rug=True, hist=True,
             axlabel='Philippine Plate observations',
             label='Philippine Plate', vertical=False
             )
-add_at(ax, "D", loc=2)
+add_at(ax, "D")
 
 # visualize
 plt.tight_layout()
