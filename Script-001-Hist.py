@@ -3,6 +3,8 @@
 import os
 import pandas as pd
 from matplotlib import pyplot as plt
+import matplotlib.artist as martist
+from matplotlib.offsetbox import AnchoredText
 import seaborn as sb
 
 sb.set_style("whitegrid")
@@ -17,6 +19,12 @@ fig.suptitle('Histogram plot of the observation sample distribution',
              fontsize=10, fontweight='bold', x=0.5, y=0.99
              )
 
+def add_at(ax, t, loc=2):
+    fp = dict(size=11)
+    _at = AnchoredText(t, loc=loc, prop=fp)
+    ax.add_artist(_at)
+    return _at
+
 # subplot 1
 ax = fig.add_subplot(221)
 sb.distplot(dfM['plate_maria'], kde=True, rug=True, hist=True,
@@ -24,11 +32,7 @@ sb.distplot(dfM['plate_maria'], kde=True, rug=True, hist=True,
             axlabel='Mariana Plate observations',
             label='Mariana Plate', vertical=False
             )
-plt.annotate('A', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
-             bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9
-                       )
-             )
+add_at(ax, "A", loc=2)
 
 # subplot 2
 ax = fig.add_subplot(222)
@@ -37,11 +41,7 @@ sb.distplot(dfM['plate_pacif'], kde=True, rug=True, hist=True,
             axlabel='Pacific Plate observations',
             label='Pacific Plate', vertical=False
             )
-plt.annotate('B', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
-             bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9
-                       )
-             )
+add_at(ax, "B", loc=2)
 
 # subplot 3
 ax = fig.add_subplot(223)
@@ -50,11 +50,7 @@ sb.distplot(dfM['plate_carol'], kde=True, rug=True, hist=True,
             axlabel='Caroline Plate observations',
             label='Caroline Plate', vertical=False
             )
-plt.annotate('C', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
-             bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9
-                       )
-             )
+add_at(ax, "C", loc=2)
 
 # subplot 4
 ax = fig.add_subplot(224)
@@ -63,11 +59,7 @@ sb.distplot(dfM['plate_phill'],kde=True, rug=True, hist=True,
             axlabel='Philippine Plate observations',
             label='Philippine Plate', vertical=False
             )
-plt.annotate('D', xy=(0.03, .9), xycoords="axes fraction", fontsize=14,
-             bbox=dict(boxstyle='round, pad=0.3', fc='w',
-                       edgecolor='grey', linewidth=1, alpha=0.9
-                       )
-             )
+add_at(ax, "D", loc=2)
 
 # visualize
 plt.tight_layout()
